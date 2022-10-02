@@ -3,12 +3,47 @@ backend:
   branch: master
 media_folder: 'static/img'
 public_folder: '/img'
-# local_backend: true
+local_backend: true
 collections:
-  - name: 'test'
-    label: 'test'
-    folder: 'src/lib/data/test'
+  - name: 'services'
+    label: 'Services'
+    folder: 'src/lib/data/services'
     create: true
+    slug: '{{slug}}'
+    format: json
+    fields:
+      - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: 'Description', name: 'description', widget: 'markdown' }
+  - name: 'selling_points'
+    label: 'Selling Points'
+    folder: 'src/lib/data/selling_points'
+    create: true
+    format: json
     slug: '{{slug}}'
     fields:
       - { label: 'Title', name: 'title', widget: 'string' }
+      - { label: 'Description', name: 'description', widget: 'markdown' }
+      - { label: 'Icon', name: 'icon', widget: 'image' }
+  - name: 'partners'
+    label: 'Partners'
+    folder: 'src/lib/data/partners'
+    create: true
+    format: json
+    slug: '{{slug}}'
+    identifier_field: name
+    fields:
+      - { label: 'Name', name: 'name', widget: 'string' }
+      - { label: 'Testimonial', name: 'description', widget: 'markdown', required: false }
+      - { label: 'logo', name: 'logo', widget: 'image' }
+  - name: 'people'
+    label: 'People'
+    folder: 'src/lib/data/people'
+    create: true
+    format: json
+    slug: '{{slug}}'
+    identifier_field: name
+    fields:
+      - { label: 'Name', name: 'name', widget: 'string' }
+      - { label: 'Description', name: 'description', widget: 'markdown' }
+      - { label: 'photo', name: 'photo', widget: 'image', required: false }
+  
