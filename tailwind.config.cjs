@@ -37,7 +37,7 @@ const config = {
 		}
 	},
 
-	plugins: [require('@brainandbones/skeleton/tailwind/theme.cjs')]
+	plugins: []
 };
 
 module.exports = config;
