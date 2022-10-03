@@ -1,5 +1,8 @@
-<svelte:head>
-	<script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
-</svelte:head>
+<script>
+	import Head from '$lib/components/Head.svelte';
+	import Footer from '$lib/components/Footer.svelte';
+</script>
 
-<slot></slot>
+<Head />
+<slot />
+<Footer />
