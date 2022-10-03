@@ -37,7 +37,10 @@ const config = {
 		}
 	},
 
-	plugins: [require('daisyui')]
+	plugins: [require('daisyui')],
+	daisyui:{
+		themes: false
+	}
 };
 
 module.exports = config;
