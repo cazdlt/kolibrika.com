@@ -1,1 +1,1 @@
-footer
+<span class="text-wasabi">footer</span>
