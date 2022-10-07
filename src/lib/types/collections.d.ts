@@ -8,3 +8,15 @@ export type SellingPoint = {
     description: string
     icon: string
 }
+
+export type Partner = {
+    name: string
+    testimonial: string
+    logo: string
+}
+
+export type Person = {
+    name: string
+    description: string
+    photo: string
+}

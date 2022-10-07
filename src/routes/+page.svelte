@@ -1,4 +1,5 @@
 <script lang="ts">
+	import AboutUs from '$lib/components/AboutUs.svelte';
 	import Contact from '$lib/components/Contact.svelte';
 	import Hero from '$lib/components/Hero.svelte';
 	import Partners from '$lib/components/Partners.svelte';
@@ -13,9 +14,10 @@
 <div>
 	<Hero />
 	<div id="services">
-	<Services />
-</div>
+		<Services />
+	</div>
 	<SellingPoints />
 	<Partners />
+	<AboutUs />
 	<Contact />
 </div>

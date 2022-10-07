@@ -1,17 +1,18 @@
 <script lang="ts">
-	import type { SellingPoint } from '$lib/types/collections';
+	import type { Person } from '$lib/types/collections';
 
-	const sellingPointFiles = import.meta.glob<SellingPoint>('../data/sellingPoints/*.json', { eager: true });
+	const peopleFiles = import.meta.glob<Person>('../data/people/*.json', { eager: true });
 </script>
 
+somos biennn
 <div class="services min-h-screen">
 	<div class="bg-opacity-60" />
 	<div class="text-center">
 		<div class="max-w-md">
-			{#each Object.entries(sellingPointFiles) as [path, sellingPoint]}
-				{sellingPoint.title}
-				{sellingPoint.description}
-                <img src={sellingPoint.icon} alt={`${sellingPoint.title} icon`}>
+			{#each Object.entries(peopleFiles) as [path, person]}
+				{person.name}
+				{person.description}
+                <img src={person.photo} alt={`${person.name} photo`}>
 			{/each}
 		</div>
 	</div>
