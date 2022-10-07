@@ -1,7 +1,5 @@
 <script lang="ts">
-	import { site } from "$lib/data/site";
-
-
+	import { site } from '$lib/data/site';
 </script>
 
 <div class="hero min-h-screen">
@@ -12,13 +10,15 @@
 			<p class="mb-5">
 				{site.description}
 			</p>
-			<button class="btn btn-primary">Get Started</button>
+			<button class="btn btn-primary">
+				<a href="#services"> Get Started </a>
+			</button>
 		</div>
 	</div>
 </div>
 
 <style>
-    .hero {
-    background-image: url("img/main/hero.jpg");
-    }
+	.hero {
+		background-image: url('img/main/hero.jpg');
+	}
 </style>

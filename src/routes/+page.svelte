@@ -12,7 +12,9 @@
 
 <div>
 	<Hero />
+	<div id="services">
 	<Services />
+</div>
 	<SellingPoints />
 	<Partners />
 	<Contact />
