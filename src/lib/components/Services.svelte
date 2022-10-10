@@ -19,7 +19,7 @@
 <style>
 	.services {
 		background-image: url("img/main/koliservices.png");
-        background-size: 60%;
+        background-size: auto 100%;
         background-repeat: no-repeat;
         background-position: top right;
 	}

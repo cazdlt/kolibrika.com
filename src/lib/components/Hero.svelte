@@ -17,8 +17,18 @@
 	</div>
 </div>
 
-<style>
+<style lang="postcss">
+
 	.hero {
-		background-image: url('img/main/hero.jpg');
+		background-image: url('img/main/herox.jpg');
+		background-size: cover;
+		background-position: 40%;
+		background-repeat: no-repeat;
+
+		@media screen(sm) {
+			background-position: top;
 	}
+	}
+	
+	
 </style>

@@ -16,12 +16,3 @@
 		</div>
 	</div>
 </div>
-
-<style>
-	.services {
-		background-image: url("img/main/koliservices.png");
-        background-size: 60%;
-        background-repeat: no-repeat;
-        background-position: top right;
-	}
-</style>

@@ -20,9 +20,9 @@ somos biennn
 
 <style>
 	.services {
-		background-image: url("img/main/koliservices.png");
-        background-size: 60%;
+		background-image: url("img/main/hummingleft.png");
+        background-size: auto 40%;
         background-repeat: no-repeat;
-        background-position: top right;
+        background-position: top left;
 	}
 </style>
