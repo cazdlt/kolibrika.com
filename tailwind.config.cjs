@@ -6,6 +6,10 @@ const config = {
 	darkMode: 'class',
 	theme: {
 		extend: {
+			gridTemplateColumns: {
+				fluid: 'repeat(auto-fit, minmax(20rem, 1fr))'
+			},
+
 			colors: {
 				wasabi: {
 					DEFAULT: '#7EA22B',
@@ -37,8 +41,8 @@ const config = {
 		}
 	},
 
-	plugins: [require('daisyui')],
-	daisyui:{
+	plugins: [require('daisyui'), require('@tailwindcss/typography')],
+	daisyui: {
 		themes: false
 	}
 };

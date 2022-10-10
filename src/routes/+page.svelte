@@ -13,9 +13,7 @@
 
 <div>
 	<Hero />
-	<div id="services">
-		<Services />
-	</div>
+	<Services />
 	<SellingPoints />
 	<Partners />
 	<AboutUs />
