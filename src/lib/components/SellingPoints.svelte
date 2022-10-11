@@ -1,27 +1,28 @@
 <script lang="ts">
 	import type { SellingPoint } from '$lib/types/collections';
+	import SectionContainer from './style/SectionContainer.svelte';
+	import SectionTitle from './style/SectionTitle.svelte';
 
-	const sellingPointFiles = import.meta.glob<SellingPoint>('../data/sellingPoints/*.json', { eager: true });
+	const sellingPointFiles = import.meta.glob<SellingPoint>('../data/sellingPoints/*.json', {
+		eager: true
+	});
 </script>
 
-<div class="services min-h-screen">
-	<div class="bg-opacity-60" />
-	<div class="text-center">
-		<div class="max-w-md">
+<div class="min-h-screen h-max flex flex-row">
+	<SectionContainer title="services" backgroundUrl="img/main/hdoscolibris.png">
+		<SectionTitle title="¿Por qué escogernos?" />
+		<div class="grid grid-cols-fluid content-evenly min-h-max h-full gap-8 justify-items-stretch">
 			{#each Object.entries(sellingPointFiles) as [path, sellingPoint]}
-				{sellingPoint.title}
-				{sellingPoint.description}
-                <img src={sellingPoint.icon} alt={`${sellingPoint.title} icon`}>
+				<div class="card shadow-xl">
+					<div class="card-body  items-center text-center">
+						<h3 class="card-title">{sellingPoint.title}</h3>
+						<p>{sellingPoint.description}</p>
+					</div>
+					<figure>
+						<img class="w-40 h-40" src={sellingPoint.icon} alt={`${sellingPoint.title} icon`} />
+					</figure>
+				</div>
 			{/each}
 		</div>
-	</div>
+	</SectionContainer>
 </div>
-
-<style>
-	.services {
-		background-image: url("img/main/hdoscolibris.png");
-        background-size: auto 60%;
-        background-repeat: no-repeat;
-        background-position: top right;
-	}
-</style>

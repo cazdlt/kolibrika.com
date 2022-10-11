@@ -7,8 +7,7 @@
 </script>
 
 <div class="min-h-screen h-max flex flex-row">
-	<div class="services opacity-30 w-full absolute h-full" />
-	<SectionContainer title="services">
+	<SectionContainer title="services" backgroundUrl="img/main/koliservices.png">
 		<SectionTitle title="Nuestros Servicios" />
 		<div class="grid grid-cols-fluid content-evenly min-h-max h-full gap-8 justify-items-stretch">
 			{#each Object.entries(serviceFiles) as [path, service]}
@@ -22,20 +21,3 @@
 		</div>
 	</SectionContainer>
 </div>
-
-<style lang="postcss">
-	.services {
-		background-image: url('img/main/koliservices.png');
-		background-size: auto 40%;
-		background-repeat: no-repeat;
-		background-position: top right;
-
-		@media screen(sm) {
-			background-size: auto 60%;
-		}
-
-		@media screen(lg) {
-			background-size: auto 80%;
-		}
-	}
-</style>
