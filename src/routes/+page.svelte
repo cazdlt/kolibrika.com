@@ -16,6 +16,6 @@
 	<Services />
 	<SellingPoints />
 	<Partners />
-	<AboutUs />
+	<!-- <AboutUs /> -->
 	<Contact />
 </div>

@@ -10,8 +10,8 @@
 			<p class="mb-5">
 				{site.description}
 			</p>
-			<button class="btn btn-primary">
-				<a href="#services"> Get Started </a>
+			<button class="btn bg-seance-600">
+				<a href="#services"> Conócenos </a>
 			</button>
 		</div>
 	</div>
