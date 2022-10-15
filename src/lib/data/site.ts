@@ -1,7 +1,7 @@
 export const site = {
 	title: 'Kolibrika',
 	company: 'Kolibrika Consultores',
-	description: 'Strategic advisors in market intelligence',
+	description: 'Asesores estratégicos en inteligencia de mercados',
 	social: {
 		mail: 'kolibrika.consultores@gmail.com',
 		linkedin: 'https://www.linkedin.com/in/nancydelatorre/'

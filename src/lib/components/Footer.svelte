@@ -22,14 +22,14 @@
 		</div>
 	</div>
 
-	<p class="text-xs text-center py-8">
+	<div class="text-xs text-center py-8">
 		Sitio diseñado y construido por <a
 			href="https://zamoradelatorre.com/"
 			class="hover:text-wasabi-50 underline"
 		>
-			Andrés Zamora
-		</a>, 2022
-	</p>
+			Andrés Zamora</a
+		>, 2022
+	</div>
 </footer>
 
 <style>
