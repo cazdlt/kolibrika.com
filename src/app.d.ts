@@ -7,3 +7,7 @@ declare namespace App {
 	// interface Error {}
 	// interface Platform {}
 }
+
+
+declare module 'svelte-carousel';
+declare module 'svelte-fa/src/fa.svelte';
