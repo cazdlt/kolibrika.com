@@ -31,7 +31,7 @@
 
 <style lang="postcss">
 	.bg {
-		background-image: url('img/main/koliservices.png');
+		background-image: url('/img/main/koliservices.png');
 		background-size: auto 40%;
 		background-repeat: no-repeat;
 		background-position: top right;

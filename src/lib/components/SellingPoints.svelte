@@ -40,7 +40,7 @@
 
 <style lang="postcss">
 	.bg {
-		background-image: url('img/main/doscolibris.png');
+		background-image: url('/img/main/doscolibris.png');
 		background-size: auto 60%;
 		background-repeat: no-repeat;
 		background-position: center right;
@@ -51,7 +51,7 @@
 
 		@media screen(lg) {
 			background-size: auto 40%;
-			background-image: url('img/main/hdoscolibris.png');
+			background-image: url('/img/main/hdoscolibris.png');
 			background-position: top right;
 		}
 	}

@@ -37,7 +37,7 @@
 		filter: invert(100%) sepia(0%) saturate(7500%) hue-rotate(95deg) brightness(98%) contrast(107%);
 	}
 	.spacer {
-		background-image: url('img/main/footerWaves.svg');
+		background-image: url('/img/main/footerWaves.svg');
 		aspect-ratio: 960/200;
 		width: 100%;
 		background-size: cover;
