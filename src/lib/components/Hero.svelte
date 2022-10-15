@@ -20,7 +20,7 @@
 
 <style lang="postcss">
 	.hero {
-		background-image: url('img/main/herox.jpg');
+		background-image: url('/img/main/herox.jpg');
 		background-size: cover;
 		background-position: 40%;
 		background-repeat: no-repeat;

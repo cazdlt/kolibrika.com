@@ -12,7 +12,7 @@
 <div class="h-max flex flex-col">
 	<SectionContainer title="services">
 		<div class="bg opacity-20 w-full absolute h-full left-0 top-0 -z-10" />
-		<SectionTitle title="Experiencia y calidad garantizada" />
+		<SectionTitle title="Calidad garantizada" />
 		<div class="grid grid-cols-fluid content-evenly min-h-max h-full gap-8 justify-items-stretch">
 			{#each Object.entries(sellingPointFiles) as [path, sellingPoint]}
 				<div class="card shadow-xl">
@@ -40,7 +40,7 @@
 
 <style lang="postcss">
 	.bg {
-		background-image: url('img/main/doscolibris.png');
+		background-image: url('/img/main/doscolibris.png');
 		background-size: auto 60%;
 		background-repeat: no-repeat;
 		background-position: center right;
@@ -51,7 +51,7 @@
 
 		@media screen(lg) {
 			background-size: auto 40%;
-			background-image: url('img/main/hdoscolibris.png');
+			background-image: url('/img/main/hdoscolibris.png');
 			background-position: top right;
 		}
 	}

@@ -19,7 +19,7 @@
 
 <style>
 	.services {
-		background-image: url("img/main/hummingleft.png");
+		background-image: url("/img/main/hummingleft.png");
         background-size: auto 40%;
         background-repeat: no-repeat;
         background-position: top left;

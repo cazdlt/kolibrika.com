@@ -22,14 +22,14 @@
 		</div>
 	</div>
 
-	<p class="text-xs text-center py-8">
+	<div class="text-xs text-center py-8">
 		Sitio diseñado y construido por <a
 			href="https://zamoradelatorre.com/"
 			class="hover:text-wasabi-50 underline"
 		>
-			Andrés Zamora
-		</a>, 2022
-	</p>
+			Andrés Zamora</a
+		>, 2022
+	</div>
 </footer>
 
 <style>
@@ -37,7 +37,7 @@
 		filter: invert(100%) sepia(0%) saturate(7500%) hue-rotate(95deg) brightness(98%) contrast(107%);
 	}
 	.spacer {
-		background-image: url('img/main/footerWaves.svg');
+		background-image: url('/img/main/footerWaves.svg');
 		aspect-ratio: 960/200;
 		width: 100%;
 		background-size: cover;

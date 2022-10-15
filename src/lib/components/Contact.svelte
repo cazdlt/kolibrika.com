@@ -20,7 +20,7 @@
 <style lang="postcss">
 	.bg {
 		@media screen(md) {
-			background-image: url('img/main/hummingright.png');
+			background-image: url('/img/main/hummingright.png');
 			background-size: auto 60%;
 			background-repeat: no-repeat;
 			background-position: center right;
