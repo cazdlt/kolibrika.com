@@ -4,7 +4,7 @@
 </script>
 
 <div class="hero h-screen">
-	<div class="hero-overlay bg-opacity-20" />
+	<div class="hero-overlay bg-opacity-30" />
 	<div class="hero-content text-center text-neutral-content">
 		<div class="max-w-md">
 			<h1 class="mb-5 text-7xl font-bold">{site.title}</h1>

@@ -1,5 +1,5 @@
 <script lang="ts">
-	export let color: string = 'seance-600';
+	export let color: string = 'seance';
 	export let type: string = 'button';
 	export let wide: boolean = false;
 </script>
