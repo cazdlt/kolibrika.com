@@ -54,6 +54,7 @@
 		width: 100%;
 		height: calc(100% - 100px);
 		position: absolute;
+		z-index: -10;
 	}
 	.wave {
 		position: absolute;

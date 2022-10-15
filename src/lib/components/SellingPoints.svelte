@@ -10,7 +10,7 @@
 
 <div class="min-h-screen h-max flex flex-row">
 	<SectionContainer title="services">
-		<div class="bg opacity-20 w-full absolute h-full left-0 top-0" />
+		<div class="bg opacity-20 w-full absolute h-full left-0 top-0 -z-10" />
 		<SectionTitle title="Experiencia y calidad garantizada" />
 		<div class="grid grid-cols-fluid content-evenly min-h-max h-full gap-8 justify-items-stretch">
 			{#each Object.entries(sellingPointFiles) as [path, sellingPoint]}

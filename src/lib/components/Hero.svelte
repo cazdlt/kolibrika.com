@@ -11,7 +11,7 @@
 				{site.description}
 			</p>
 			<a href="#services">
-			<button class="btn bg-seance-600 btn-md">
+			<button class="btn bg-seance-600 btn-md hover:brightness-150 hover:bg-seance-600">
 				 Conócenos 
 			</button>
 		</a>
