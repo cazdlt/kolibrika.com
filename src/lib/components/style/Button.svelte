@@ -1,12 +1,11 @@
 <script lang="ts">
-	export let color: string = 'seance';
 	export let type: string = 'button';
 	export let wide: boolean = false;
 </script>
 
 <button
 	class:btn-wide={wide}
-	class="btn bg-{color} btn-md hover:brightness-125 hover:bg-{color}"
+	class="btn bg-seance btn-md hover:brightness-125 hover:bg-seance"
 	{type}
 >
 	<slot />
