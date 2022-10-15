@@ -4,7 +4,6 @@
 	const peopleFiles = import.meta.glob<Person>('../data/people/*.json', { eager: true });
 </script>
 
-somos biennn
 <div class="services min-h-screen">
 	<div class="bg-opacity-60" />
 	<div class="text-center">

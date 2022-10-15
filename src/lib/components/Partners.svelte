@@ -85,8 +85,12 @@
 		display: grid;
 		filter: grayscale(100%);
 		grid-template-columns: repeat(auto-fit, minmax(12rem, 18rem));
-		gap: 4rem;
 		place-content: center;
-		padding: 4rem 0;
+
+		@media screen(md) {
+			gap: 4rem;
+			padding: 4rem 0;
+			
+		}
 	}
 </style>

@@ -1,5 +1,6 @@
 <script lang="ts">
 	import type { SellingPoint } from '$lib/types/collections';
+	import Button from './style/Button.svelte';
 	import SectionContainer from './style/SectionContainer.svelte';
 	import SectionTitle from './style/SectionTitle.svelte';
 
@@ -8,7 +9,7 @@
 	});
 </script>
 
-<div class="min-h-screen h-max flex flex-row">
+<div class="h-max flex flex-col">
 	<SectionContainer title="services">
 		<div class="bg opacity-20 w-full absolute h-full left-0 top-0 -z-10" />
 		<SectionTitle title="Experiencia y calidad garantizada" />
@@ -20,10 +21,19 @@
 						<p>{sellingPoint.description}</p>
 					</div>
 					<figure>
-						<img class="w-40 h-40 mb-8" src={sellingPoint.icon} alt={`${sellingPoint.title} icon`} />
+						<img
+							class="w-40 h-40 mb-8"
+							src={sellingPoint.icon}
+							alt={`${sellingPoint.title} icon`}
+						/>
 					</figure>
 				</div>
 			{/each}
+		</div>
+		<div class="self-center place-self-center py-8">
+			<a href="#contact">
+				<Button>Contáctanos</Button>
+			</a>
 		</div>
 	</SectionContainer>
 </div>

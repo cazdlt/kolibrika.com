@@ -1,12 +1,13 @@
 <script lang="ts">
 	import type { Service } from '$lib/types/collections';
+	import Button from './style/Button.svelte';
 	import SectionContainer from './style/SectionContainer.svelte';
 	import SectionTitle from './style/SectionTitle.svelte';
 
 	const serviceFiles = import.meta.glob<Service>('../data/services/*.json', { eager: true });
 </script>
 
-<div class="min-h-screen h-max flex flex-row">
+<div class="h-max flex flex-col">
 	<SectionContainer title="services">
 		<div class="bg opacity-20 w-full absolute h-full left-0 top-0 -z-10" />
 		<SectionTitle title="Nuestros Servicios" />
@@ -19,6 +20,11 @@
 					</div>
 				</div>
 			{/each}
+		</div>
+		<div class="self-center place-self-center py-8">
+			<a href="#contact">
+				<Button>Contáctanos</Button>
+			</a>
 		</div>
 	</SectionContainer>
 </div>
