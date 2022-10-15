@@ -5,5 +5,14 @@
 </script>
 
 <Head />
-<slot />
-<Footer />
+<div class="scroll-smooth">
+	<slot />
+	<Footer />
+</div>
+
+<style>
+	@import url('https://fonts.googleapis.com/css2?family=Quicksand:wght@500;600;700&display=swap');
+	:global(html) {
+		scroll-behavior: smooth;
+	}
+</style>

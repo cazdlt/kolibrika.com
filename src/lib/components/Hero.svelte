@@ -3,16 +3,18 @@
 </script>
 
 <div class="hero min-h-screen">
-	<div class="hero-overlay bg-opacity-60" />
+	<div class="hero-overlay bg-opacity-20" />
 	<div class="hero-content text-center text-neutral-content">
 		<div class="max-w-md">
-			<h1 class="mb-5 text-5xl font-bold">{site.title}</h1>
-			<p class="mb-5">
+			<h1 class="mb-5 text-7xl font-bold">{site.title}</h1>
+			<p class="mb-5 text-lg">
 				{site.description}
 			</p>
-			<button class="btn bg-seance-600">
-				<a href="#services"> Conócenos </a>
+			<a href="#services">
+			<button class="btn bg-seance-600 btn-md">
+				 Conócenos 
 			</button>
+		</a>
 		</div>
 	</div>
 </div>

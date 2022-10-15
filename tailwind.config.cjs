@@ -6,6 +6,9 @@ const config = {
 	darkMode: 'class',
 	theme: {
 		extend: {
+			fontFamily: {
+				sans: ['Quicksand', 'ui-sans-serif', 'system-ui']
+			},
 			gridTemplateColumns: {
 				fluid: 'repeat(auto-fit, minmax(20rem, 1fr))'
 			},
