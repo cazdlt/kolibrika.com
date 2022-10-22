@@ -89,7 +89,7 @@
 
 		@media screen(md) {
 			gap: 4rem;
-			padding: 4rem 0;
+			padding: 0 0 4rem 0;
 			
 		}
 	}
