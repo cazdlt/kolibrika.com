@@ -5,7 +5,7 @@
 
 <button
 	class:btn-wide={wide}
-	class="btn bg-seance btn-md hover:brightness-125 hover:bg-seance"
+	class="btn bg-seance btn-md hover:brightness-125 hover:bg-seance border-seance text-neutral-content"
 	{type}
 >
 	<slot />

@@ -46,7 +46,7 @@ const config = {
 
 	plugins: [require('daisyui'), require('@tailwindcss/typography')],
 	daisyui: {
-		themes: false
+		themes: ["light"]
 	}
 };
 

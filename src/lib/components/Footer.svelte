@@ -1,6 +1,6 @@
 <script lang="ts">
 	import logoUrl from '$lib/assets/logoWhite.svg?url';
-	import Fa from 'svelte-fa/src/fa.svelte';
+	import Fa from 'svelte-fa';
 	import { faLinkedin } from '@fortawesome/free-brands-svg-icons';
 	import { faEnvelope } from '@fortawesome/free-solid-svg-icons';
 	import { site } from '$lib/data/site';
