@@ -6,33 +6,69 @@
 }
 
 @theme {
-	--font-sans: 'Quicksand', ui-sans-serif, system-ui, sans-serif;
+	--font-sans: 'Manrope', ui-sans-serif, system-ui, sans-serif;
+	--font-display: 'Newsreader', Georgia, Cambria, serif;
+	--font-mono: 'IBM Plex Mono', ui-monospace, SFMono-Regular, monospace;
+
+	--color-ink: #19161d;
+	--color-ink-muted: #56505e;
+	--color-surface: #faf9f6;
+	--color-surface-alt: #f2f0ea;
+	--color-surface-card: #ffffff;
+	--color-line: #e2dfd7;
 
 	--color-wasabi: #7ea22b;
-	--color-wasabi-50: #d0e69f;
-	--color-wasabi-100: #c8e18f;
-	--color-wasabi-200: #b9d96f;
+	--color-wasabi-50: #f3f8e6;
+	--color-wasabi-100: #e2efc2;
+	--color-wasabi-200: #c8e18f;
 	--color-wasabi-300: #a9d04e;
 	--color-wasabi-400: #97c234;
 	--color-wasabi-500: #7ea22b;
-	--color-wasabi-600: #5c761f;
+	--color-wasabi-600: #556e1c;
 	--color-wasabi-700: #394913;
 	--color-wasabi-800: #171d08;
-	--color-wasabi-900: #000000;
+	--color-wasabi-900: #0a0d04;
 
 	--color-seance: #6417a2;
-	--color-seance-50: #d1a7f2;
-	--color-seance-100: #c795f0;
-	--color-seance-200: #b571eb;
-	--color-seance-300: #a24ee6;
+	--color-seance-50: #f6effc;
+	--color-seance-100: #ebd9f9;
+	--color-seance-200: #d1a7f2;
+	--color-seance-300: #b571eb;
 	--color-seance-400: #8f2ae1;
 	--color-seance-500: #7a1cc6;
 	--color-seance-600: #6417a2;
-	--color-seance-700: #461071;
-	--color-seance-800: #270940;
-	--color-seance-900: #09020f;
+	--color-seance-700: #4c117c;
+	--color-seance-800: #2a0a45;
+	--color-seance-900: #16101c;
+
+	--ease-out-expo: cubic-bezier(0.22, 1, 0.36, 1);
 }
 
-@utility grid-cols-fluid {
-	grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+@layer base {
+	html {
+		scroll-behavior: smooth;
+	}
+
+	h1,
+	h2,
+	h3 {
+		text-wrap: balance;
+	}
+
+	p {
+		text-wrap: pretty;
+	}
+
+	@media (prefers-reduced-motion: reduce) {
+		html {
+			scroll-behavior: auto;
+		}
+		*,
+		*::before,
+		*::after {
+			animation-duration: 0.01ms !important;
+			animation-iteration-count: 1 !important;
+			transition-duration: 0.01ms !important;
+		}
+	}
 }

@@ -1,47 +1,45 @@
 <script lang="ts">
 	import type { Service } from '#lib/types/collections.ts';
-	import Button from './style/Button.svelte';
 	import SectionContainer from './style/SectionContainer.svelte';
 	import SectionTitle from './style/SectionTitle.svelte';
 
 	const serviceFiles = import.meta.glob<Service>('../data/services/*.json', { eager: true });
+	const services = Object.entries(serviceFiles);
 </script>
 
-<div class="h-max flex flex-col">
-	<SectionContainer title="services">
-		<div class="bg opacity-20 w-full absolute h-full left-0 top-0 -z-10"></div>
-		<SectionTitle title="Nuestros Servicios" />
-		<div class="grid grid-cols-fluid content-evenly min-h-max h-full gap-8 justify-items-stretch">
-			{#each Object.entries(serviceFiles) as [path, service] (path)}
-				<div class="card shadow-xl">
-					<div class="card-body">
-						<h3 class="card-title">{service.title}</h3>
-						<div>{service.description}</div>
+<SectionContainer id="services">
+	<div class="grid gap-12 lg:grid-cols-12 lg:items-start">
+		<div class="flex flex-col gap-8 lg:col-span-5">
+			<SectionTitle
+				eyebrow="Servicios"
+				title="De la pregunta estratégica al sistema de datos que la responde."
+				subtitle="Combinamos criterio de negocio con ingeniería moderna: desde estudios puntuales de mercado hasta plataformas completas de analítica comercial."
+			/>
+			<div class="hidden max-w-[250px] pt-2 lg:block">
+				<img
+					src="/img/main/koliservices.png"
+					alt="Colibrí posado sobre una rama"
+					class="h-auto w-full object-contain mix-blend-multiply"
+				/>
+			</div>
+		</div>
+
+		<div class="flex flex-col divide-y divide-line border-y border-line lg:col-span-7">
+			{#each services as [path, service], index (path)}
+				<article class="grid gap-3 py-7 sm:grid-cols-12 sm:gap-6">
+					<span class="font-mono text-xs font-medium text-seance-700 sm:col-span-2 sm:pt-1.5">
+						0{index + 1}
+					</span>
+					<div class="flex flex-col gap-2 sm:col-span-10">
+						<h3 class="text-lg font-semibold tracking-tight text-ink sm:text-xl">
+							{service.title}
+						</h3>
+						<p class="text-sm leading-relaxed text-ink-muted sm:text-base">
+							{service.description}
+						</p>
 					</div>
-				</div>
+				</article>
 			{/each}
 		</div>
-		<div class="self-center place-self-center py-8">
-			<a href="#contact">
-				<Button>Contáctanos</Button>
-			</a>
-		</div>
-	</SectionContainer>
-</div>
-
-<style>
-	.bg {
-		background-image: url('/img/main/koliservices.png');
-		background-size: auto 40%;
-		background-repeat: no-repeat;
-		background-position: top right;
-
-		@media (width >= 40rem) {
-			background-size: auto 60%;
-		}
-
-		@media (width >= 64rem) {
-			background-size: auto 80%;
-		}
-	}
-</style>
+	</div>
+</SectionContainer>

@@ -1,58 +1,57 @@
 <script lang="ts">
 	import type { SellingPoint } from '#lib/types/collections.ts';
-	import Button from './style/Button.svelte';
-	import SectionContainer from './style/SectionContainer.svelte';
-	import SectionTitle from './style/SectionTitle.svelte';
 
 	const sellingPointFiles = import.meta.glob<SellingPoint>('../data/sellingPoints/*.json', {
 		eager: true
 	});
+	const sellingPoints = Object.entries(sellingPointFiles);
 </script>
 
-<div class="h-max flex flex-col">
-	<SectionContainer title="selling-points">
-		<div class="bg opacity-20 w-full absolute h-full left-0 top-0 -z-10"></div>
-		<SectionTitle title="Calidad garantizada" />
-		<div class="grid grid-cols-fluid content-evenly min-h-max h-full gap-8 justify-items-stretch">
-			{#each Object.entries(sellingPointFiles) as [path, sellingPoint] (path)}
-				<div class="card shadow-xl">
-					<div class="card-body items-center text-center">
-						<h3 class="card-title">{sellingPoint.title}</h3>
-						<p>{sellingPoint.description}</p>
-					</div>
-					<figure>
-						<img
-							class="w-40 h-40 mb-8"
-							src={sellingPoint.icon}
-							alt={`${sellingPoint.title} icon`}
-						/>
-					</figure>
-				</div>
-			{/each}
+<section
+	id="selling-points"
+	class="relative isolate scroll-mt-20 overflow-hidden bg-[#141f11] py-20 text-white sm:py-28"
+>
+	<img
+		src="/img/main/alt/hero3.jpg"
+		alt="Colibrí posado en medio de follaje verde y flores violetas"
+		class="selling-bg absolute inset-0 -z-20 h-full w-full -scale-x-100 object-cover"
+	/>
+	<div
+		class="absolute inset-0 -z-10 bg-gradient-to-r from-[#121c0f]/95 via-[#121c0f]/82 via-55% to-[#121c0f]/20"
+		aria-hidden="true"
+	></div>
+
+	<div class="mx-auto max-w-6xl px-6 sm:px-8">
+		<div class="flex max-w-lg flex-col gap-10">
+			<div class="flex flex-col gap-3">
+				<p class="font-mono text-xs font-medium tracking-[0.14em] text-wasabi-200 uppercase">
+					Por qué Kolibrika
+				</p>
+				<h2
+					class="font-display text-3xl leading-tight font-medium tracking-tight text-white sm:text-4xl lg:text-[2.65rem]"
+				>
+					Criterio comercial con capacidad real de ingeniería.
+				</h2>
+			</div>
+
+			<div class="flex flex-col divide-y divide-white/15 border-y border-white/15">
+				{#each sellingPoints as [path, point] (path)}
+					<article class="flex flex-col gap-1.5 py-6">
+						<h3 class="text-base font-semibold text-white sm:text-lg">{point.title}</h3>
+						<p class="text-sm leading-relaxed text-white/80">{point.description}</p>
+					</article>
+				{/each}
+			</div>
 		</div>
-		<div class="self-center place-self-center py-8">
-			<a href="#contact">
-				<Button>Contáctanos</Button>
-			</a>
-		</div>
-	</SectionContainer>
-</div>
+	</div>
+</section>
 
 <style>
-	.bg {
-		background-image: url('/img/main/doscolibris.png');
-		background-size: auto 60%;
-		background-repeat: no-repeat;
-		background-position: center right;
-
-		@media (width >= 40rem) {
-			background-size: auto 60%;
-		}
+	.selling-bg {
+		object-position: 28% 55%;
 
 		@media (width >= 64rem) {
-			background-size: auto 40%;
-			background-image: url('/img/main/hdoscolibris.png');
-			background-position: top right;
+			object-position: 22% 50%;
 		}
 	}
 </style>

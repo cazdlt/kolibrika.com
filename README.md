@@ -6,7 +6,7 @@ Static marketing website for **Kolibrika Consultores** (market intelligence cons
 
 - **Framework:** SvelteKit 3 + Svelte 5 + Vite 8
 - **Output:** Fully prerendered static site (`@sveltejs/adapter-static`, `prerender = true` in `src/routes/+layout.ts`)
-- **Styling:** Tailwind CSS 4 (`@tailwindcss/vite`, `@tailwindcss/typography`) + DaisyUI 5 (`light` theme, custom `wasabi` and `seance` color scales in `src/app.css`, `Quicksand` font)
+- **Styling:** Tailwind CSS 4 (`@tailwindcss/vite`, `@tailwindcss/typography`) + DaisyUI 5 (`light` theme, custom `wasabi`, `seance`, and warm-ivory neutral tokens in `src/app.css`, `Newsreader` display + `Manrope` body + `IBM Plex Mono` mono fonts)
 - **Language & Quality:** TypeScript 6, `svelte-check`, ESLint 10, Prettier 3
 - **CMS:** Decap CMS 3 (`/admin/`) with Netlify Identity + Git Gateway
 - **Runtime:** Node.js 26 (`.nvmrc`, `engines.node >=26`)
@@ -41,12 +41,13 @@ npm run dev
 │   ├── app.html                    # HTML shell (lang="es", Google Fonts)
 │   ├── routes/
 │   │   ├── +layout.ts              # Global prerender = true
-│   │   ├── +layout.svelte          # Head + page content + Footer
-│   │   └── +page.svelte            # Landing page sections + Netlify Identity widget
+│   │   ├── +layout.svelte          # Head + Navbar + main + Footer
+│   │   ├── +page.svelte            # Landing page sections + Netlify Identity widget
+│   │   └── +error.svelte           # Branded 404 page
 │   └── lib/
 │       ├── assets/                 # SVG logos
-│       ├── components/             # Hero, Services, SellingPoints, Partners, AboutUs, Contact, Footer, Head
-│       │   └── style/              # Reusable UI primitives (Button, SectionContainer, inputs)
+│       ├── components/             # Navbar, Hero, Services, Methodology, SellingPoints, Partners, Faq, Contact, Footer, Head, AboutUs
+│       │   └── style/              # Reusable UI primitives (Button, SectionContainer, SectionTitle, inputs)
 │       ├── data/
 │       │   ├── site.ts             # Site metadata (title, company, description, email, LinkedIn, location)
 │       │   ├── services/           # JSON entries loaded via import.meta.glob
@@ -93,8 +94,9 @@ Content is stored as JSON files in `src/lib/data/` and bundled at build time wit
 
 ## Known Notes / Current State
 
-- `AboutUs.svelte` is currently commented out in `src/routes/+page.svelte`.
-- `Contact.svelte` renders the contact form UI but does not yet have a form submission handler or Netlify Forms attributes (`name`, `method="POST"`, `data-netlify="true"`).
+- `AboutUs.svelte` is currently not rendered in `src/routes/+page.svelte`.
+- `Contact.svelte` is wired for **Netlify Forms** (`name="contact"`, `method="POST"`, `data-netlify="true"`, `data-netlify-honeypot="bot-field"`) with client-side validation and inline loading/success/error states.
+- Services, selling points, and partners are populated from JSON files under `src/lib/data/` and editable via Decap CMS (`/admin/`).
 
 ## Design & Inspiration
 

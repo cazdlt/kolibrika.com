@@ -3,22 +3,42 @@
 		label: string;
 		name: string;
 		rows?: number;
+		value?: string;
+		placeholder?: string;
+		required?: boolean;
+		error?: string;
 	}
 
-	let { label, name, rows = 5 }: Props = $props();
+	let {
+		label,
+		name,
+		rows = 4,
+		value = $bindable(''),
+		placeholder = '',
+		required = false,
+		error = ''
+	}: Props = $props();
 </script>
 
-<div class="relative z-0">
+<div class="flex flex-col gap-1.5">
+	<label for={name} class="text-xs font-semibold tracking-wider text-ink-muted uppercase">
+		{label}{#if required}<span class="ml-0.5 text-seance-700" aria-hidden="true">*</span>{/if}
+	</label>
 	<textarea
 		id={name}
 		{name}
-		class="resize-none block py-2.5 px-0 w-full text-sm text-gray-900 bg-transparent border-0 border-b-2 border-gray-300 appearance-none dark:text-white dark:border-gray-600 dark:focus:border-blue-500 focus:outline-none focus:ring-0 focus:border-blue-600 peer"
-		placeholder=""
-		{rows}></textarea>
-	<label
-		for={name}
-		class="absolute text-sm text-gray-500 dark:text-gray-400 duration-300 transform -translate-y-6 scale-75 top-3 -z-10 origin-[0] peer-focus:left-0 peer-focus:text-blue-600 peer-focus:dark:text-blue-500 peer-placeholder-shown:scale-100 peer-placeholder-shown:translate-y-0 peer-focus:scale-75 peer-focus:-translate-y-6"
-	>
-		{label}
-	</label>
+		{rows}
+		{required}
+		{placeholder}
+		bind:value
+		aria-invalid={error ? 'true' : undefined}
+		aria-describedby={error ? `${name}-error` : undefined}
+		class="w-full resize-y rounded-sm border bg-surface-card px-3.5 py-3 text-sm text-ink transition-colors duration-200 placeholder:text-ink-muted/50 focus-visible:outline-2 focus-visible:outline-offset-0 focus-visible:outline-seance-600 {error
+			? 'border-red-500'
+			: 'border-line hover:border-ink/35 focus-visible:border-seance-700'}"></textarea>
+	{#if error}
+		<p id="{name}-error" class="text-xs font-medium text-red-600" role="alert">
+			{error}
+		</p>
+	{/if}
 </div>
