@@ -1,6 +1,13 @@
 <script lang="ts">
-	export let type: string = 'button';
-	export let wide: boolean = false;
+	import type { Snippet } from 'svelte';
+
+	interface Props {
+		type?: 'button' | 'submit' | 'reset';
+		wide?: boolean;
+		children?: Snippet;
+	}
+
+	let { type = 'button', wide = false, children }: Props = $props();
 </script>
 
 <button
@@ -8,5 +15,5 @@
 	class="btn bg-seance btn-md hover:brightness-125 hover:bg-seance border-seance text-neutral-content"
 	{type}
 >
-	<slot />
+	{@render children?.()}
 </button>

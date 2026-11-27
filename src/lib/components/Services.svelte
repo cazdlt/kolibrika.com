@@ -1,5 +1,5 @@
 <script lang="ts">
-	import type { Service } from '$lib/types/collections';
+	import type { Service } from '#lib/types/collections.ts';
 	import Button from './style/Button.svelte';
 	import SectionContainer from './style/SectionContainer.svelte';
 	import SectionTitle from './style/SectionTitle.svelte';
@@ -9,14 +9,14 @@
 
 <div class="h-max flex flex-col">
 	<SectionContainer title="services">
-		<div class="bg opacity-20 w-full absolute h-full left-0 top-0 -z-10" />
+		<div class="bg opacity-20 w-full absolute h-full left-0 top-0 -z-10"></div>
 		<SectionTitle title="Nuestros Servicios" />
 		<div class="grid grid-cols-fluid content-evenly min-h-max h-full gap-8 justify-items-stretch">
-			{#each Object.entries(serviceFiles) as [path, service]}
+			{#each Object.entries(serviceFiles) as [path, service] (path)}
 				<div class="card shadow-xl">
 					<div class="card-body">
 						<h3 class="card-title">{service.title}</h3>
-						<div class="">{service.description}</div>
+						<div>{service.description}</div>
 					</div>
 				</div>
 			{/each}
@@ -29,18 +29,18 @@
 	</SectionContainer>
 </div>
 
-<style lang="postcss">
+<style>
 	.bg {
 		background-image: url('/img/main/koliservices.png');
 		background-size: auto 40%;
 		background-repeat: no-repeat;
 		background-position: top right;
 
-		@media screen(sm) {
+		@media (width >= 40rem) {
 			background-size: auto 60%;
 		}
 
-		@media screen(lg) {
+		@media (width >= 64rem) {
 			background-size: auto 80%;
 		}
 	}

@@ -1,10 +1,10 @@
 <script lang="ts">
-	import { site } from '$lib/data/site';
+	import { site } from '#lib/data/site.ts';
 	import Button from './style/Button.svelte';
 </script>
 
 <div class="hero h-screen">
-	<div class="hero-overlay bg-opacity-30" />
+	<div class="hero-overlay bg-black/30"></div>
 	<div class="hero-content text-center text-neutral-content">
 		<div class="max-w-md">
 			<h1 class="mb-5 text-7xl font-bold">{site.title}</h1>
@@ -18,14 +18,14 @@
 	</div>
 </div>
 
-<style lang="postcss">
+<style>
 	.hero {
 		background-image: url('/img/main/herox.jpg');
 		background-size: cover;
 		background-position: 40%;
 		background-repeat: no-repeat;
 
-		@media screen(sm) {
+		@media (width >= 40rem) {
 			background-position: top;
 		}
 	}

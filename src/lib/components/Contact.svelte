@@ -8,8 +8,8 @@
 
 <SectionContainer title="contact">
 	<SectionTitle title="Hablemos" />
-	<div class="bg opacity-20 w-full absolute h-full right-20 top-0 -z-10" />
-	<form class="form-control flex gap-8 w-full md:w-1/2">
+	<div class="bg opacity-20 w-full absolute h-full right-20 top-0 -z-10"></div>
+	<form class="flex flex-col gap-8 w-full md:w-1/2">
 		<TextInput label="Nombre" name="name" />
 		<TextInput label="Correo" name="mail" type="email" />
 		<TextArea label="Mensaje" name="message" />
@@ -17,9 +17,9 @@
 	</form>
 </SectionContainer>
 
-<style lang="postcss">
+<style>
 	.bg {
-		@media screen(md) {
+		@media (width >= 48rem) {
 			background-image: url('/img/main/hummingright.png');
 			background-size: auto 60%;
 			background-repeat: no-repeat;

@@ -1,5 +1,5 @@
 <script lang="ts">
-	import type { SellingPoint } from '$lib/types/collections';
+	import type { SellingPoint } from '#lib/types/collections.ts';
 	import Button from './style/Button.svelte';
 	import SectionContainer from './style/SectionContainer.svelte';
 	import SectionTitle from './style/SectionTitle.svelte';
@@ -10,13 +10,13 @@
 </script>
 
 <div class="h-max flex flex-col">
-	<SectionContainer title="services">
-		<div class="bg opacity-20 w-full absolute h-full left-0 top-0 -z-10" />
+	<SectionContainer title="selling-points">
+		<div class="bg opacity-20 w-full absolute h-full left-0 top-0 -z-10"></div>
 		<SectionTitle title="Calidad garantizada" />
 		<div class="grid grid-cols-fluid content-evenly min-h-max h-full gap-8 justify-items-stretch">
-			{#each Object.entries(sellingPointFiles) as [path, sellingPoint]}
+			{#each Object.entries(sellingPointFiles) as [path, sellingPoint] (path)}
 				<div class="card shadow-xl">
-					<div class="card-body  items-center text-center">
+					<div class="card-body items-center text-center">
 						<h3 class="card-title">{sellingPoint.title}</h3>
 						<p>{sellingPoint.description}</p>
 					</div>
@@ -38,18 +38,18 @@
 	</SectionContainer>
 </div>
 
-<style lang="postcss">
+<style>
 	.bg {
 		background-image: url('/img/main/doscolibris.png');
 		background-size: auto 60%;
 		background-repeat: no-repeat;
 		background-position: center right;
 
-		@media screen(sm) {
+		@media (width >= 40rem) {
 			background-size: auto 60%;
 		}
 
-		@media screen(lg) {
+		@media (width >= 64rem) {
 			background-size: auto 40%;
 			background-image: url('/img/main/hdoscolibris.png');
 			background-position: top right;

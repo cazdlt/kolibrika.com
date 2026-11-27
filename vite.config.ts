@@ -1,9 +1,13 @@
+import adapter from '@sveltejs/adapter-static';
 import { sveltekit } from '@sveltejs/kit/vite';
-import type { UserConfig } from 'vite';
-import svg from '@poppanator/sveltekit-svg';
+import tailwindcss from '@tailwindcss/vite';
+import { defineConfig } from 'vite';
 
-const config: UserConfig = {
-	plugins: [sveltekit(), svg()]
-};
-
-export default config;
+export default defineConfig({
+	plugins: [
+		tailwindcss(),
+		sveltekit({
+			adapter: adapter()
+		})
+	]
+});

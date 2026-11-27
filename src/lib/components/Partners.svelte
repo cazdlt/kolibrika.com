@@ -1,5 +1,5 @@
 <script lang="ts">
-	import type { Partner } from '$lib/types/collections';
+	import type { Partner } from '#lib/types/collections.ts';
 	import SectionContainer from './style/SectionContainer.svelte';
 	import SectionTitle from './style/SectionTitle.svelte';
 
@@ -23,9 +23,9 @@
 				/>
 			</svg>
 		</div>
-		<div class="bg" />
+		<div class="bg"></div>
 		<div class="partners-grid">
-			{#each partners as [path, partner], i}
+			{#each partners as [path, partner] (path)}
 				<img src={partner.logo} alt={`${partner.name} logo`} class="object-contain" />
 			{/each}
 		</div>
@@ -45,9 +45,9 @@
 	</SectionContainer>
 </div>
 
-<style lang="postcss">
+<style>
 	.bg {
-		background-color: theme(colors.wasabi.50);
+		background-color: var(--color-wasabi-50);
 		opacity: 20%;
 		top: 50px;
 		left: 0;
@@ -63,7 +63,7 @@
 		line-height: 0;
 		opacity: 20%;
 		.shape-fill {
-			fill: theme(colors.wasabi.50);
+			fill: var(--color-wasabi-50);
 		}
 		svg {
 			position: relative;
@@ -87,10 +87,9 @@
 		grid-template-columns: repeat(auto-fit, minmax(12rem, 18rem));
 		place-content: center;
 
-		@media screen(md) {
+		@media (width >= 48rem) {
 			gap: 4rem;
 			padding: 0 0 4rem 0;
-			
 		}
 	}
 </style>
