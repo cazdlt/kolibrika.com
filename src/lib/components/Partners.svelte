@@ -12,9 +12,7 @@
 	<div class="mx-auto flex w-full max-w-6xl flex-col gap-8 px-6 sm:px-8">
 		<div class="grid gap-8 lg:grid-cols-12 lg:items-center">
 			<div class="flex flex-col gap-2 lg:col-span-6">
-				<p class="font-mono text-xs font-medium tracking-[0.14em] text-wasabi-600 uppercase">
-					Experiencia
-				</p>
+				<p class="text-xs font-semibold tracking-[0.12em] text-wasabi-600 uppercase">Experiencia</p>
 				<h2
 					class="font-display text-2xl leading-snug font-medium tracking-tight text-ink sm:text-[1.75rem]"
 				>
@@ -23,7 +21,7 @@
 			</div>
 
 			<div
-				class="flex flex-wrap items-center justify-center gap-x-12 gap-y-6 sm:justify-start lg:col-span-6 lg:justify-end"
+				class="flex flex-wrap items-center justify-start gap-x-10 gap-y-6 lg:col-span-6 lg:justify-end"
 			>
 				{#each partners as [path, partner] (path)}
 					<img
@@ -31,7 +29,7 @@
 						alt="Logo de {partner.name}"
 						loading="lazy"
 						decoding="async"
-						class="h-11 w-auto max-w-[220px] object-contain opacity-90 transition-opacity duration-300 hover:opacity-100 sm:h-12"
+						class="h-auto max-h-16 w-auto max-w-[200px] object-contain opacity-90 transition-opacity duration-300 hover:opacity-100 sm:max-w-[220px]"
 					/>
 				{/each}
 			</div>

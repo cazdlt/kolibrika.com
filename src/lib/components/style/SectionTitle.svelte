@@ -10,7 +10,7 @@
 
 <div class="flex max-w-2xl flex-col gap-3">
 	{#if eyebrow}
-		<p class="font-mono text-xs font-medium tracking-[0.14em] text-wasabi-600 uppercase">
+		<p class="text-xs font-semibold tracking-[0.12em] text-wasabi-600 uppercase">
 			{eyebrow}
 		</p>
 	{/if}

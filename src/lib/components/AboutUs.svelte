@@ -15,7 +15,7 @@
 			<SectionTitle
 				eyebrow="Equipo"
 				title="Dos generaciones, un mismo criterio."
-				subtitle="Unimos trayectoria directiva en inteligencia de mercados con ingeniería de datos e inteligencia artificial aplicada, sin capas intermedias."
+				subtitle="Combinamos más de dos décadas de trayectoria en inteligencia de mercados con ingeniería de datos e inteligencia artificial aplicada."
 			/>
 		</div>
 
@@ -36,7 +36,7 @@
 							<h3 class="font-display text-2xl font-medium tracking-tight text-ink">
 								{person.name}
 							</h3>
-							<p class="font-mono text-xs font-medium tracking-[0.08em] text-seance-700 uppercase">
+							<p class="text-sm font-medium text-seance-700">
 								{person.role}
 							</p>
 						</div>

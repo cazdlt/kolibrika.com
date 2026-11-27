@@ -28,14 +28,21 @@
 </script>
 
 <SectionContainer id="methodology" tone="alt">
-	<SectionTitle eyebrow="Cómo trabajamos" title="Consultoría y tecnología bajo un mismo techo." />
+	<SectionTitle
+		eyebrow="Cómo trabajamos"
+		title="Un proceso directo, del diagnóstico a la operación."
+	/>
 
 	<ol class="grid gap-10 md:grid-cols-3 md:gap-8">
 		{#each steps as step (step.number)}
 			<li class="flex flex-col gap-3 border-t border-ink/20 pt-6">
-				<div class="flex items-center gap-3">
-					<span class="font-mono text-xs font-medium text-seance-700">{step.number}</span>
-					<span class="font-mono text-xs text-ink-muted uppercase">{step.label}</span>
+				<div class="flex items-baseline gap-2.5">
+					<span class="font-display text-base font-medium text-seance-700 tabular-nums">
+						{step.number}
+					</span>
+					<span class="text-xs font-semibold tracking-[0.1em] text-ink-muted uppercase">
+						{step.label}
+					</span>
 				</div>
 				<h3 class="text-lg font-semibold text-ink">{step.title}</h3>
 				<p class="text-sm leading-relaxed text-ink-muted">{step.description}</p>

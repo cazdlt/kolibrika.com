@@ -31,7 +31,7 @@
 	<div class="mx-auto max-w-6xl px-6 sm:px-8">
 		<div class="flex max-w-lg flex-col gap-10">
 			<div class="flex flex-col gap-3">
-				<p class="font-mono text-xs font-medium tracking-[0.14em] text-wasabi-200 uppercase">
+				<p class="text-xs font-semibold tracking-[0.12em] text-wasabi-200 uppercase">
 					Por qué Kolibrika
 				</p>
 				<h2
@@ -59,7 +59,7 @@
 
 <style>
 	.selling-bg {
-		object-position: 28% 55%;
+		object-position: 85% 50%;
 
 		@media (width >= 64rem) {
 			object-position: 22% 50%;

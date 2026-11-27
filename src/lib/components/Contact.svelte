@@ -78,7 +78,7 @@
 				subtitle="Agenda una sesión diagnóstica inicial de 30 minutos sin costo ni compromiso."
 			/>
 
-			<div class="flex flex-col gap-2 border-t border-line pt-6 text-sm text-ink-muted">
+			<div class="flex flex-col gap-2.5 border-t border-line pt-6 text-sm text-ink-muted">
 				<p>{site.location} · Atención para toda la región</p>
 				<a
 					href="mailto:{site.social.mail}"
@@ -86,6 +86,23 @@
 				>
 					{site.social.mail}
 				</a>
+				<div class="flex flex-wrap items-center gap-x-3 gap-y-1">
+					<a
+						href="tel:{site.social.phoneE164}"
+						class="w-fit font-medium text-seance-700 underline decoration-seance-200 underline-offset-4 transition-colors hover:text-ink"
+					>
+						{site.social.phone}
+					</a>
+					<span aria-hidden="true" class="text-ink-muted/50">·</span>
+					<!-- eslint-disable-next-line svelte/no-navigation-without-resolve -->
+					<a
+						href={site.social.whatsapp}
+						rel="external noopener noreferrer"
+						class="w-fit font-medium text-wasabi-600 underline decoration-wasabi-200 underline-offset-4 transition-colors hover:text-ink"
+					>
+						Escribir por WhatsApp
+					</a>
+				</div>
 			</div>
 		</div>
 

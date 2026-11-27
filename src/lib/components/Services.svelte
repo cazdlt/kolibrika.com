@@ -33,7 +33,9 @@
 		<div class="flex flex-col divide-y divide-line border-y border-line lg:col-span-7">
 			{#each services as [path, service], index (path)}
 				<article class="flex flex-col gap-2 py-7 sm:flex-row sm:items-baseline sm:gap-6">
-					<span class="w-8 shrink-0 font-mono text-xs font-medium text-seance-700">
+					<span
+						class="w-8 shrink-0 font-display text-base font-medium text-seance-700 tabular-nums"
+					>
 						0{index + 1}
 					</span>
 					<div class="flex flex-col gap-2">

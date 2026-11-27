@@ -44,6 +44,7 @@
 				image: ogImageUrl,
 				description: site.description,
 				email: site.social.mail,
+				telephone: site.social.phone,
 				sameAs: [site.social.linkedin],
 				address: {
 					'@type': 'PostalAddress',
