@@ -80,4 +80,3 @@ Established through iterative visual reviews with the owner — follow these rul
 - **Netlify Forms live check:** Form submission (`name="contact"`, including the `company` field) has not been verified end-to-end on deployed production yet.
 - **`og:image` in `Head.svelte`:** Currently points to `https://kolibrika.com/img/main/herox.jpg` (original hero photo rather than `hero-extended.jpg`).
 - **CMS schema vs UI:** `SellingPoints.svelte` no longer renders `icon`, though `static/admin/config.yml` and `src/lib/types/collections.ts` still require `icon`. `Partners.svelte` renders logos only (no testimonials yet).
-- **Social links:** Footer LinkedIn currently links only to Nancy de la Torre (`https://www.linkedin.com/in/nancydelatorre/`).
