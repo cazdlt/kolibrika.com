@@ -29,6 +29,8 @@
 					<img
 						src={partner.logo}
 						alt="Logo de {partner.name}"
+						loading="lazy"
+						decoding="async"
 						class="h-11 w-auto max-w-[220px] object-contain opacity-90 transition-opacity duration-300 hover:opacity-100 sm:h-12"
 					/>
 				{/each}

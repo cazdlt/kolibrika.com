@@ -4,3 +4,15 @@
 
 [build.environment]
   NODE_VERSION = "26"
+
+[[redirects]]
+  from = "https://www.kolibrika.com/*"
+  to = "https://kolibrika.com/:splat"
+  status = 301
+  force = true
+
+[[redirects]]
+  from = "https://kolibrika.netlify.app/*"
+  to = "https://kolibrika.com/:splat"
+  status = 301
+  force = true

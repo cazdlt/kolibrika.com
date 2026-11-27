@@ -1,6 +1,14 @@
 <script lang="ts">
+	import Head from '#lib/components/Head.svelte';
 	import Button from '#lib/components/style/Button.svelte';
+	import { site } from '#lib/data/site.ts';
 </script>
+
+<Head
+	title="Página no encontrada — {site.title}"
+	description="El enlace puede haber cambiado o ya no está disponible."
+	noindex={true}
+/>
 
 <section
 	class="mx-auto flex min-h-[65vh] max-w-2xl flex-col items-center justify-center gap-6 px-6 py-24 text-center"

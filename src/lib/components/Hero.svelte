@@ -7,8 +7,12 @@
 	class="relative isolate flex min-h-[84vh] items-end overflow-hidden bg-[#1e2d18] sm:items-center"
 >
 	<img
-		src="/img/main/hero-extended.jpg"
+		src="/img/main/hero-extended.webp"
 		alt="Colibrí en vuelo frente a flores violetas"
+		width="1376"
+		height="768"
+		fetchpriority="high"
+		decoding="async"
 		class="hero-bg absolute inset-0 -z-20 h-full w-full object-cover"
 	/>
 	<div

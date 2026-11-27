@@ -19,8 +19,12 @@
 			/>
 			<div class="hidden max-w-[250px] pt-2 lg:block">
 				<img
-					src="/img/main/koliservices.png"
+					src="/img/main/koliservices.webp"
 					alt="Colibrí posado sobre una rama"
+					width="600"
+					height="953"
+					loading="lazy"
+					decoding="async"
 					class="h-auto w-full -scale-x-100 object-contain mix-blend-multiply [mask-image:linear-gradient(to_bottom,black_75%,transparent_100%)]"
 				/>
 			</div>
