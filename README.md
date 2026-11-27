@@ -1,6 +1,6 @@
 # kolibrika.com
 
-Static marketing website for **Kolibrika Consultores** (market intelligence consulting, Bogotá, Colombia).
+Static marketing website for **Kolibrika Consultores** (market intelligence, data engineering, BI, and applied AI consulting, Bogotá, Colombia).
 
 ## Tech Stack
 
@@ -87,10 +87,10 @@ Content is stored as JSON files in `src/lib/data/` and bundled at build time wit
 
 ### DNS — Cloudflare
 
-- DNS for `kolibrika.com` is managed in **Cloudflare** (not Netlify DNS) and points to the Netlify deployment:
-  - Apex (`kolibrika.com`) points to Netlify (CNAME flattening to the Netlify site hostname or A record to Netlify's load balancer `75.2.60.5`).
-  - `www` CNAME points to the Netlify site hostname (`<site>.netlify.app`).
-- **SSL/TLS note:** Keep records DNS-only (grey cloud) while Netlify provisions/renews its Let's Encrypt certificate, or use Cloudflare **Full (strict)** mode once Netlify's certificate is active.
+- DNS for `kolibrika.com` is managed in **Cloudflare** (not Netlify DNS) and points to `kolibrika.netlify.app`:
+  - `CNAME` `kolibrika.com` → `kolibrika.netlify.app` (DNS-only / `proxied: false`, Cloudflare apex flattening)
+  - `CNAME` `www.kolibrika.com` → `kolibrika.netlify.app` (DNS-only / `proxied: false`)
+- **SSL/TLS note:** Keep records DNS-only (grey cloud) so Netlify provisions/renews its Let's Encrypt certificate cleanly, or use Cloudflare **Full (strict)** mode if proxied.
 
 ## Known Notes / Current State
 
