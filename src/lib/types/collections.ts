@@ -11,12 +11,12 @@ export type SellingPoint = {
 
 export type Partner = {
 	name: string;
-	testimonial: string;
+	description?: string;
 	logo: string;
 };
 
 export type Person = {
 	name: string;
 	description: string;
-	photo: string;
+	photo?: string;
 };

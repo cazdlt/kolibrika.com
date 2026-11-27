@@ -16,7 +16,7 @@ collections:
       - { label: 'Description', name: 'description', widget: 'markdown' }
   - name: 'selling_points'
     label: 'Selling Points'
-    folder: 'src/lib/data/selling_points'
+    folder: 'src/lib/data/sellingPoints'
     create: true
     format: json
     slug: '{{slug}}'
