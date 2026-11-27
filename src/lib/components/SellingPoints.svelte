@@ -12,7 +12,7 @@
 	class="relative isolate scroll-mt-20 overflow-hidden bg-[#141f11] py-20 text-white sm:py-28"
 >
 	<img
-		src="/img/main/alt/hero3.jpg"
+		src="/img/main/hero3.jpg"
 		alt="Colibrí posado en medio de follaje verde y flores violetas"
 		class="selling-bg absolute inset-0 -z-20 h-full w-full -scale-x-100 object-cover"
 	/>
