@@ -23,7 +23,6 @@ collections:
     fields:
       - { label: 'Title', name: 'title', widget: 'string' }
       - { label: 'Description', name: 'description', widget: 'markdown' }
-      - { label: 'Icon', name: 'icon', widget: 'image' }
   - name: 'partners'
     label: 'Partners'
     folder: 'src/lib/data/partners'
@@ -44,6 +43,9 @@ collections:
     identifier_field: name
     fields:
       - { label: 'Name', name: 'name', widget: 'string' }
+      - { label: 'Role', name: 'role', widget: 'string' }
       - { label: 'Description', name: 'description', widget: 'markdown' }
+      - { label: 'LinkedIn', name: 'linkedin', widget: 'string', required: false }
       - { label: 'photo', name: 'photo', widget: 'image', required: false }
+      - { label: 'Order', name: 'order', widget: 'number', required: false }
   

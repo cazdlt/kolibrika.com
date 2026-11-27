@@ -8,6 +8,7 @@
 	const navLinks = [
 		{ label: 'Servicios', hash: '#services' },
 		{ label: 'Cómo trabajamos', hash: '#methodology' },
+		{ label: 'Equipo', hash: '#about' },
 		{ label: 'Experiencia', hash: '#partners' },
 		{ label: 'Preguntas', hash: '#faq' }
 	];

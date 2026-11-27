@@ -1,4 +1,5 @@
 <script lang="ts">
+	import AboutUs from '#lib/components/AboutUs.svelte';
 	import Contact from '#lib/components/Contact.svelte';
 	import Faq from '#lib/components/Faq.svelte';
 	import Hero from '#lib/components/Hero.svelte';
@@ -16,6 +17,7 @@
 <Services />
 <Methodology />
 <SellingPoints />
+<AboutUs />
 <Partners />
 <Faq />
 <Contact />

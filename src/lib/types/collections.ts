@@ -6,7 +6,6 @@ export type Service = {
 export type SellingPoint = {
 	title: string;
 	description: string;
-	icon: string;
 };
 
 export type Partner = {
@@ -17,6 +16,9 @@ export type Partner = {
 
 export type Person = {
 	name: string;
+	role: string;
 	description: string;
+	linkedin?: string;
 	photo?: string;
+	order?: number;
 };
