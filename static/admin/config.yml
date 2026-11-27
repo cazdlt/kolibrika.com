@@ -14,6 +14,7 @@ collections:
     fields:
       - { label: 'Title', name: 'title', widget: 'string' }
       - { label: 'Description', name: 'description', widget: 'markdown' }
+      - { label: 'Order', name: 'order', widget: 'number', required: false }
   - name: 'selling_points'
     label: 'Selling Points'
     folder: 'src/lib/data/sellingPoints'
@@ -23,6 +24,7 @@ collections:
     fields:
       - { label: 'Title', name: 'title', widget: 'string' }
       - { label: 'Description', name: 'description', widget: 'markdown' }
+      - { label: 'Order', name: 'order', widget: 'number', required: false }
   - name: 'partners'
     label: 'Partners'
     folder: 'src/lib/data/partners'

@@ -4,15 +4,15 @@
 	import { site } from '#lib/data/site.ts';
 </script>
 
-<footer class="bg-seance-900 text-white">
+<footer class="bg-[#141f11] text-white">
 	<div class="mx-auto flex max-w-6xl flex-col gap-10 px-6 py-14 sm:px-8">
 		<div class="flex flex-col justify-between gap-8 md:flex-row md:items-center">
 			<div class="flex flex-col gap-3">
 				<a href={resolve('/')} class="w-fit" aria-label="{site.company} — Inicio">
 					<img src={logoUrl} alt={site.company} class="white-logo h-9 w-auto" />
 				</a>
-				<p class="max-w-sm text-sm text-white/75">{site.tagline}</p>
-				<p class="text-xs text-white/55">{site.location}</p>
+				<p class="max-w-sm text-sm text-white/80">{site.tagline}</p>
+				<p class="text-xs text-white/70">{site.location}</p>
 			</div>
 
 			<div class="flex flex-col gap-4 md:items-end">
@@ -25,6 +25,9 @@
 					</a>
 					<a href="{resolve('/')}#methodology" class="transition-colors hover:text-wasabi-200">
 						Cómo trabajamos
+					</a>
+					<a href="{resolve('/')}#about" class="transition-colors hover:text-wasabi-200">
+						Equipo
 					</a>
 					<a href="{resolve('/')}#partners" class="transition-colors hover:text-wasabi-200">
 						Experiencia
@@ -79,7 +82,7 @@
 		</div>
 
 		<div
-			class="flex flex-col justify-between gap-3 border-t border-white/10 pt-6 text-xs text-white/55 sm:flex-row sm:items-center"
+			class="flex flex-col justify-between gap-3 border-t border-white/15 pt-6 text-xs text-white/70 sm:flex-row sm:items-center"
 		>
 			<p>{site.company} © {new Date().getFullYear()}.</p>
 			<p>

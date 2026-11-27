@@ -47,7 +47,7 @@
 			{/each}
 			<a
 				href="{resolve('/')}#contact"
-				class="border-b border-seance-700 pb-0.5 text-sm font-semibold text-seance-700 transition-colors duration-200 hover:border-ink hover:text-ink focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-seance-600"
+				class="inline-flex min-h-9 items-center justify-center rounded-sm bg-seance-700 px-4 py-1.5 text-sm font-semibold text-white transition-colors duration-200 hover:bg-seance-800 focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-seance-600"
 			>
 				Hablemos
 			</a>

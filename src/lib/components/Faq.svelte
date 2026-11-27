@@ -31,7 +31,7 @@
 	];
 </script>
 
-<SectionContainer id="faq">
+<SectionContainer id="faq" tone="alt">
 	<div class="grid gap-12 lg:grid-cols-12 lg:items-start">
 		<div class="lg:col-span-4">
 			<SectionTitle eyebrow="Preguntas frecuentes" title="Antes de empezar." />

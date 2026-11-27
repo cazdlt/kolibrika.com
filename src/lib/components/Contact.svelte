@@ -69,7 +69,7 @@
 	}
 </script>
 
-<SectionContainer id="contact" tone="alt">
+<SectionContainer id="contact">
 	<div class="grid gap-12 lg:grid-cols-12 lg:items-start">
 		<div class="flex flex-col gap-6 lg:col-span-5">
 			<SectionTitle
@@ -168,7 +168,7 @@
 
 					<div class="pt-1">
 						<Button type="submit" size="lg" disabled={status === 'submitting'}>
-							{status === 'submitting' ? 'Enviando...' : 'Enviar mensaje'}
+							{status === 'submitting' ? 'Enviando...' : 'Solicitar sesión diagnóstica'}
 						</Button>
 					</div>
 				</form>

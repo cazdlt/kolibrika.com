@@ -1,10 +1,13 @@
 <script lang="ts">
 	import type { SellingPoint } from '#lib/types/collections.ts';
+	import Button from './style/Button.svelte';
 
 	const sellingPointFiles = import.meta.glob<SellingPoint>('../data/sellingPoints/*.json', {
 		eager: true
 	});
-	const sellingPoints = Object.entries(sellingPointFiles);
+	const sellingPoints = Object.entries(sellingPointFiles).sort(
+		([, a], [, b]) => (a.order ?? Number.MAX_SAFE_INTEGER) - (b.order ?? Number.MAX_SAFE_INTEGER)
+	);
 </script>
 
 <section
@@ -17,7 +20,7 @@
 		class="selling-bg absolute inset-0 -z-20 h-full w-full -scale-x-100 object-cover"
 	/>
 	<div
-		class="absolute inset-0 -z-10 bg-gradient-to-r from-[#121c0f]/95 via-[#121c0f]/82 via-55% to-[#121c0f]/20"
+		class="absolute inset-0 -z-10 bg-[#121c0f]/86 lg:bg-transparent lg:bg-gradient-to-r lg:from-[#121c0f]/95 lg:via-[#121c0f]/82 lg:via-55% lg:to-[#121c0f]/20"
 		aria-hidden="true"
 	></div>
 
@@ -41,6 +44,10 @@
 						<p class="text-sm leading-relaxed text-white/80">{point.description}</p>
 					</article>
 				{/each}
+			</div>
+
+			<div>
+				<Button href="#contact" variant="light" size="md">Agendar diagnóstico gratuito</Button>
 			</div>
 		</div>
 	</div>

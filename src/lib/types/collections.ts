@@ -1,11 +1,13 @@
 export type Service = {
 	title: string;
 	description: string;
+	order?: number;
 };
 
 export type SellingPoint = {
 	title: string;
 	description: string;
+	order?: number;
 };
 
 export type Partner = {

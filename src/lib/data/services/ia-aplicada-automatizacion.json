@@ -1,4 +1,5 @@
 {
 	"title": "IA aplicada y automatización de procesos",
-	"description": "Flujos automatizados y soluciones con modelos de lenguaje (LLMs) sobre tus propios datos: análisis de documentos, asistentes internos y seguimiento operativo sin trabajo manual repetitivo."
+	"description": "Flujos automatizados y soluciones con modelos de lenguaje (LLMs) sobre tus propios datos: análisis de documentos, asistentes internos y seguimiento operativo sin trabajo manual repetitivo.",
+	"order": 4
 }

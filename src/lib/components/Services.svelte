@@ -4,7 +4,9 @@
 	import SectionTitle from './style/SectionTitle.svelte';
 
 	const serviceFiles = import.meta.glob<Service>('../data/services/*.json', { eager: true });
-	const services = Object.entries(serviceFiles);
+	const services = Object.entries(serviceFiles).sort(
+		([, a], [, b]) => (a.order ?? Number.MAX_SAFE_INTEGER) - (b.order ?? Number.MAX_SAFE_INTEGER)
+	);
 </script>
 
 <SectionContainer id="services">
@@ -19,18 +21,18 @@
 				<img
 					src="/img/main/koliservices.png"
 					alt="Colibrí posado sobre una rama"
-					class="h-auto w-full object-contain mix-blend-multiply"
+					class="h-auto w-full -scale-x-100 object-contain mix-blend-multiply [mask-image:linear-gradient(to_bottom,black_75%,transparent_100%)]"
 				/>
 			</div>
 		</div>
 
 		<div class="flex flex-col divide-y divide-line border-y border-line lg:col-span-7">
 			{#each services as [path, service], index (path)}
-				<article class="grid gap-3 py-7 sm:grid-cols-12 sm:gap-6">
-					<span class="font-mono text-xs font-medium text-seance-700 sm:col-span-2 sm:pt-1.5">
+				<article class="flex flex-col gap-2 py-7 sm:flex-row sm:items-baseline sm:gap-6">
+					<span class="w-8 shrink-0 font-mono text-xs font-medium text-seance-700">
 						0{index + 1}
 					</span>
-					<div class="flex flex-col gap-2 sm:col-span-10">
+					<div class="flex flex-col gap-2">
 						<h3 class="text-lg font-semibold tracking-tight text-ink sm:text-xl">
 							{service.title}
 						</h3>

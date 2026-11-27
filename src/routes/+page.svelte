@@ -14,10 +14,10 @@
 </svelte:head>
 
 <Hero />
+<Partners />
 <Services />
 <Methodology />
 <SellingPoints />
 <AboutUs />
-<Partners />
 <Faq />
 <Contact />

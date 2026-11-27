@@ -1,4 +1,5 @@
 {
 	"title": "Ingeniería de datos y Data Warehouse",
-	"description": "Integración automatizada de ERPs, bases de datos, Excel y fuentes externas en pipelines reproducibles y un almacén de datos confiable."
+	"description": "Integración automatizada de ERPs, bases de datos, Excel y fuentes externas en pipelines reproducibles y un almacén de datos confiable.",
+	"order": 2
 }
